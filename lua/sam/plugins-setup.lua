@@ -26,9 +26,11 @@ end
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
+	-- themes
 	use("Mofiqul/dracula.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("bluz71/vim-nightfly-guicolors")
+	use("olivercederborg/poimandres.nvim")
 
 	use("numToStr/Comment.nvim")
 	use("nvim-lua/plenary.nvim")

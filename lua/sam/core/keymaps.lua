@@ -6,6 +6,10 @@ local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>")
 
+keymap.set("n", "<leader>ww", ":w<CR>") -- save
+keymap.set("n", "<leader>wq", ":wq<CR>") -- save and quit
+keymap.set("n", "<leader>nw", ":noa w<CR>") -- save without formating
+
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search highlights
 
 keymap.set("n", "x", '"_x') -- delete one char, without copy to register
