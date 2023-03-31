@@ -1,36 +1,48 @@
 -- import lualine plugin safely
 local status, lualine = pcall(require, "lualine")
 if not status then
-  return
+	return
 end
 
--- get lualine nightfly theme
-local lualine_nightfly = require("lualine.themes.nightfly")
+local colors = require("monokai-pro.colorscheme").colors
 
--- new colors for theme
-local new_colors = {
-  blue = "#65D1FF",
-  green = "#3EFFDC",
-  violet = "#FF61EF",
-  yellow = "#FFDA7B",
-  black = "#000000",
+local monokai_pro = {}
+
+monokai_pro.normal = {
+	a = { bg = colors.base.yellow, fg = colors.base.black, gui = "bold" },
+	b = { bg = colors.editorSuggestWidget.background, fg = colors.base.yellow },
+	c = { bg = colors.base.black, fg = colors.base.black },
+	x = { bg = colors.base.black, fg = colors.base.suggestWidgetForeground },
 }
 
--- change nightlfy theme colors
-lualine_nightfly.normal.a.bg = new_colors.blue
-lualine_nightfly.insert.a.bg = new_colors.green
-lualine_nightfly.visual.a.bg = new_colors.violet
-lualine_nightfly.command = {
-  a = {
-    gui = "bold",
-    bg = new_colors.yellow,
-    fg = new_colors.black, -- black
-  },
+monokai_pro.insert = {
+	a = { bg = colors.base.green, fg = colors.base.black },
+	b = { bg = colors.editorSuggestWidget.background, fg = colors.base.green },
 }
 
+monokai_pro.command = {
+	a = { bg = colors.base.yellow, fg = colors.base.black },
+	b = { bg = colors.editorSuggestWidget.background, fg = colors.base.yellow },
+}
+
+monokai_pro.visual = {
+	a = { bg = colors.base.magenta, fg = colors.base.black },
+	b = { bg = colors.editorSuggestWidget.background, fg = colors.base.magenta },
+}
+
+monokai_pro.replace = {
+	a = { bg = colors.base.red, fg = colors.base.black },
+	b = { bg = colors.editorSuggestWidget.background, fg = colors.base.red },
+}
+
+monokai_pro.inactive = {
+	a = { bg = colors.base.black, fg = colors.base.yellow },
+	b = { bg = colors.base.black, fg = colors.base.black },
+	c = { bg = colors.base.black, fg = colors.base.black },
+}
 -- configure lualine with modified theme
 lualine.setup({
-  options = {
-    theme = lualine_nightfly,
-  },
+	options = {
+		theme = monokai_pro,
+	},
 })

@@ -31,6 +31,8 @@ return packer.startup(function(use)
 	use("EdenEast/nightfox.nvim")
 	use("bluz71/vim-nightfly-guicolors")
 	use("olivercederborg/poimandres.nvim")
+	use("loctvl842/monokai-pro.nvim")
+	use("sainnhe/sonokai")
 
 	use("numToStr/Comment.nvim")
 	use("nvim-lua/plenary.nvim")
