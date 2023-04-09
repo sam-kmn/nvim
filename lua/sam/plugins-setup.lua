@@ -92,6 +92,7 @@ return packer.startup(function(use)
 	-- git signs
 	use("lewis6991/gitsigns.nvim")
 
+	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
 	if packer_bootstrap then
