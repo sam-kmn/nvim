@@ -82,6 +82,8 @@ lspconfig["tailwindcss"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["astro"].setup({})
+
 -- configure tailwindcss server
 lspconfig["volar"].setup({
 	capabilities = capabilities,
