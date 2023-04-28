@@ -98,7 +98,7 @@ lspconfig["emmet_ls"].setup({
 })
 
 -- configure lua server (with special settings)
-lspconfig["sumneko_lua"].setup({
+lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = { -- custom settings for lua
@@ -106,6 +106,19 @@ lspconfig["sumneko_lua"].setup({
 			-- make the language server recognize "vim" global
 			diagnostics = {
 				globals = { "vim" },
+			},
+			format = {
+				enable = false,
+			},
+			hint = {
+				enable = true,
+				-- I am not sure wether rest is necessary, I copied it from chris@machine
+				arrayIndex = "Disable", -- "Enable", "Auto", "Disable"
+				await = true,
+				paramName = "Disable", -- "All", "Literal", "Disable"
+				paramType = false,
+				semicolon = "Disable", -- "All", "SameLine", "Disable"
+				setType = true,
 			},
 			workspace = {
 				-- make language server aware of runtime files

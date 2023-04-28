@@ -7,15 +7,16 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>")
 
 keymap.set("n", "<leader>ww", ":w<CR>") -- save
-keymap.set("n", "<leader>wq", ":wq<CR>") -- save and quit
-keymap.set("n", "<leader>nw", ":noa w<CR>") -- save without formating
+keymap.set("n", "<leader>wq", ":wq<CR>") -- save and quit nvim
+keymap.set("n", "<leader>we", ":w<CR> <BAR> :bdelete<CR>") -- save and close tab
+keymap.set("n", "<leader>wn", ":noa w<CR>") -- save without formating
 
-keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search highlights
+keymap.set("n", "<leader>hl", ":nohl<CR>") -- clear search highlights
 
 keymap.set("n", "x", '"_x') -- delete one char, without copy to register
 
-keymap.set("n", "<leader>+", "<C-a>") -- inc number
-keymap.set("n", "<leader>-", "<C-x>") -- decr number
+keymap.set("n", "<leader>-", "<C-a>") -- inc number
+keymap.set("n", "<leader>=", "<C-x>") -- decr number
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -30,9 +31,9 @@ keymap.set("n", "<leader>tt", ":tabnew<CR>") -- open new tab
 -- keymap.set("n", "<leader>bb", ":tabp<CR>") -- prev tab
 
 -- bufferline tabs
-keymap.set("n", "<leader>xx", ":bdelete<CR>") -- close current tab
-keymap.set("n", "<leader>nn", ":bnext<CR>") -- next tab
-keymap.set("n", "<leader>bb", ":bprevious<CR>") -- prev tab
+keymap.set("n", "<leader>x", ":bdelete<CR>") -- close current tab
+keymap.set("n", "<leader><Tab>", ":bnext<CR>") -- next tab
+keymap.set("n", "<leader><S-Tab>", ":bprevious<CR>") -- prev tab
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")

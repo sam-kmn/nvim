@@ -95,6 +95,8 @@ return packer.startup(function(use)
 	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
+	use("rcarriga/nvim-notify")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
