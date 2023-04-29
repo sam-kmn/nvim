@@ -27,6 +27,9 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- themes
+	--
+	use({ "ellisonleao/gruvbox.nvim" })
+	use("folke/tokyonight.nvim")
 	use("Mofiqul/dracula.nvim")
 	use("EdenEast/nightfox.nvim")
 	use("bluz71/vim-nightfly-guicolors")
@@ -95,7 +98,7 @@ return packer.startup(function(use)
 	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
-	use("rcarriga/nvim-notify")
+	-- use("rcarriga/nvim-notify")
 
 	if packer_bootstrap then
 		require("packer").sync()

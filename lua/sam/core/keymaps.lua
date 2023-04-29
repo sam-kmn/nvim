@@ -7,7 +7,8 @@ local keymap = vim.keymap
 keymap.set("i", "jk", "<ESC>")
 
 keymap.set("n", "<leader>ww", ":w<CR>") -- save
-keymap.set("n", "<leader>wq", ":wq<CR>") -- save and quit nvim
+keymap.set("n", "<leader>wq", ":wq<CR>") -- quit
+keymap.set("n", "<leader>qq", ":q<CR>") -- save and quit
 keymap.set("n", "<leader>we", ":w<CR> <BAR> :bdelete<CR>") -- save and close tab
 keymap.set("n", "<leader>wn", ":noa w<CR>") -- save without formating
 
